@@ -36,19 +36,19 @@ public class AuthService {
         return new AuthResponse(token);
     }
 
-    public String register(AuthRequest request) {
-
-        if(userRepository.findByEmailIgnoreCase(request.getEmail()).isPresent()) {
-            throw new RuntimeException("Email already exists");
-        }
-
-        User user = new User();
-        user.setUsername(request.getUsername());
-        user.setEmail(request.getEmail());
-        user.setPasswordHash(passwordEncoder.encode(request.getPassword()));
-        user.setRole(Role.USER);
-
-        userRepository.save(user);
-        return "User registered successfully";
-    }
+//    public String register(AuthRequest request) {
+//
+//        if(userRepository.findByEmailIgnoreCase(request.getEmail()).isPresent()) {
+//            throw new RuntimeException("Email already exists");
+//        }
+//
+//        User user = new User();
+//        user.setUsername(request.getUsername());
+//        user.setEmail(request.getEmail());
+//        user.setPasswordHash(passwordEncoder.encode(request.getPassword()));
+//        user.setRole(Role.USER);
+//
+//        userRepository.save(user);
+//        return "User registered successfully";
+//    }
 }

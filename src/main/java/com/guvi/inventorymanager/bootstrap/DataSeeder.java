@@ -8,9 +8,10 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Component;
 
 //@Component
-public class DataSeeder implements CommandLineRunner {
+public class DataSeeder{
+//public class DataSeeder implements CommandLineRunner {
 
-    private final UserRepository userRepository;
+    /*private final UserRepository userRepository;
     private final PasswordEncoder passwordEncoder;
 
     public DataSeeder(UserRepository userRepository,
@@ -33,5 +34,5 @@ public class DataSeeder implements CommandLineRunner {
             userRepository.save(admin);
             System.out.println("Admin user created");
         }
-    }
+    }*/
 }
