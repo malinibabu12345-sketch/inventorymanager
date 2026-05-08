@@ -32,7 +32,7 @@ public class DataSeeder implements CommandLineRunner{
             userRepository.save(admin);
             System.out.println("Admin created");
         }
-        if (userRepository.findByEmailIgnoreCase("admin@gmail.com").isEmpty()) {
+        if (userRepository.findByEmailIgnoreCase("user@gmail.com").isEmpty()) {
 
             User user = new User();
             user.setUsername("user");
