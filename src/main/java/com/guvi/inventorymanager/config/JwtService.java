@@ -26,7 +26,7 @@ public class JwtService {
 
     private long expirationMs;
 
-    //@PostConstruct
+    @PostConstruct
     public void init() {
         expirationMs = expirationMinutes * 60 * 1000L;
         secretKey = Keys.hmacShaKeyFor(

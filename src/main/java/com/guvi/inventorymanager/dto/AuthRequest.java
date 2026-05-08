@@ -1,13 +1,9 @@
 package com.guvi.inventorymanager.dto;
 
-import com.guvi.inventorymanager.model.Role;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 
 public class AuthRequest {
-
-    @NotBlank(message = "Name is required")
-    private String username;
 
     @Email(message = "Invalid email format")
     @NotBlank(message = "Email is required")
@@ -17,10 +13,6 @@ public class AuthRequest {
     private String password;
 
     public AuthRequest() {}
-
-    public String getUsername() { return username; }
-
-    public void setUsername(String username) { this.username = username; }
 
     public String getEmail() {
         return email;
