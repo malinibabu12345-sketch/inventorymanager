@@ -1,9 +1,13 @@
 package com.guvi.inventorymanager.dto;
 
+import jakarta.validation.constraints.NotNull;
+
 public class OrderItemRequest {
 
+    @NotNull(message = "Product id is required")
     private Long productId;
 
+    @NotNull(message = "Quantity is required")
     private Integer quantity;
 
     public OrderItemRequest() {}

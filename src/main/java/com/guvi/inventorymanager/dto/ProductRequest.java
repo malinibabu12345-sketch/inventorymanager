@@ -2,6 +2,7 @@ package com.guvi.inventorymanager.dto;
 
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Positive;
 
 import java.util.Set;
 
@@ -13,11 +14,13 @@ public class ProductRequest {
     private String description;
 
     @NotNull(message = "Price is required")
+    @Positive(message = "Price must be greater than 0")
     private double price;
 
     @NotNull(message = "Stock quantity is required")
     private Integer stockQuantity;
 
+    @NotNull(message = "Category id is required")
     private Set<Long> categoryIds;
 
     public ProductRequest() {}
